@@ -1,0 +1,626 @@
+{
+    "cluster_name": "danaeagles_e",
+    "routing_table": {
+        "indices": {
+            "dodox_jobmanager_base": {
+                "shards": {
+                    "10": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 10,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "rxHWNVQ0RxiPrjoelJLcUQ"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 10,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "MgodnlunTlWc55kz8WiJjw"
+                            }
+                        }
+                    ],
+                    "24": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 24,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "c4DDYLUjTCmbnqzyd39CYQ"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 24,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "n2NC27MwQVypCMbQa2Lgsg"
+                            }
+                        }
+                    ],
+                    "17": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 17,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "UexfE_BYQvSsdXB12AsgXw"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 17,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "tGZHJQSgRJu4tjKbbWPlWA"
+                            }
+                        }
+                    ],
+                    "20": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 20,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "OcaMhZrZRNWbTEEDdlx63A"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 20,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "pMjBGZS9RDyDOX8djVMC3Q"
+                            }
+                        }
+                    ],
+                    "9": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 9,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "majMe830Rp6--5ZEL8PTiA"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 9,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "U-4zn42jTl6YpUN2FgU1PA"
+                            }
+                        }
+                    ],
+                    "11": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 11,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "_F82Ne5rSJGMYLs5YbhTJQ"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 11,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "lB_ScK74Qv-k_c2gEaEDaQ"
+                            }
+                        }
+                    ],
+                    "3": [
+                        {
+                            "state": "UNASSIGNED",
+                            "primary": true,
+                            "node": null,
+                            "relocating_node": null,
+                            "shard": 3,
+                            "index": "dodox_jobmanager_base",
+                            "recovery_source": {
+                                "type": "EXISTING_STORE"
+                            },
+                            "unassigned_info": {
+                                "reason": "ALLOCATION_FAILED",
+                                "at": "2020-09-09T02:55:43.135Z",
+                                "failed_attempts": 5,
+                                "delayed": false,
+                                "details": "failed to create shard, failure IOException[failed to obtain in-memory shard lock]; nested: ShardLockObtainFailedException[[dodox_jobmanager_base][3]: obtaining shard lock timed out after 5000ms]; ",
+                                "allocation_status": "deciders_no"
+                            }
+                        },
+                        {
+                            "state": "UNASSIGNED",
+                            "primary": false,
+                            "node": null,
+                            "relocating_node": null,
+                            "shard": 3,
+                            "index": "dodox_jobmanager_base",
+                            "recovery_source": {
+                                "type": "PEER"
+                            },
+                            "unassigned_info": {
+                                "reason": "NODE_LEFT",
+                                "at": "2020-09-09T02:50:59.386Z",
+                                "delayed": false,
+                                "details": "node_left[w9jLu1qEQJuLrDMXa5BfiQ]",
+                                "allocation_status": "no_attempt"
+                            }
+                        }
+                    ],
+                    "5": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 5,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "8pCBTbFQTHW0QjJqG-g-4w"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 5,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "d83qkYZgStqHYSUyXz_KCw"
+                            }
+                        }
+                    ],
+                    "2": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 2,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "7TvYXqSlTPqT1D68Jra8kg"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 2,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "sUZtxZbtT4-0brnRHIoUqA"
+                            }
+                        }
+                    ],
+                    "6": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 6,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "e8A_3tJMQQCnEqA4VD1t-w"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 6,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "Xa5jv24YR2-VokyzUEbpMg"
+                            }
+                        }
+                    ],
+                    "21": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 21,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "JmmlGoTHRSuj7Rsr1bmefA"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 21,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "wkzudEBhT3uOQMH40xvR9Q"
+                            }
+                        }
+                    ],
+                    "19": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 19,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "8WVMoi32RuCvn5CTC4OSKA"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 19,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "ktJpNepfQDCBtErI0XfuBg"
+                            }
+                        }
+                    ],
+                    "16": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 16,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "VTTW2IyDSmmPOezRRQPl1g"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 16,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "kAFZgV6FToSB9FRHVrGC3Q"
+                            }
+                        }
+                    ],
+                    "4": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 4,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "OztN3xlVQLOSVbsNG_iWQA"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 4,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "Ldasde1dTDGF-8xwS_xA7w"
+                            }
+                        }
+                    ],
+                    "15": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 15,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "2BiJKMBSTuSgdPFdWhBLSA"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 15,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "XEi1Tqo4QyO01OwzHOaKWA"
+                            }
+                        }
+                    ],
+                    "13": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 13,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "S8QgJf99TDu8X-0WaWLZlg"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 13,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "A0SBwN-uQEqQ7A2kOw4xag"
+                            }
+                        }
+                    ],
+                    "7": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 7,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "5jOMG-Y6T5GQQORyrXLaMw"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 7,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "MoZDNtscSxuACs7vV3yjTA"
+                            }
+                        }
+                    ],
+                    "14": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 14,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "0mEoM9JBQHaOgULsvXo_wg"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 14,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "aGQmGQ_VTxeteRIV-DaSWA"
+                            }
+                        }
+                    ],
+                    "22": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 22,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "llcNRPWrThGlzl9lXzsftg"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 22,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "X5oB1TSdRkGN3_wP6BZ8TQ"
+                            }
+                        }
+                    ],
+                    "12": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 12,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "yHbLLEjKRb6-gd_YVUGRdw"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 12,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "aVrDL4sbS42Ea_i-4tKapg"
+                            }
+                        }
+                    ],
+                    "1": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 1,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "QCht5pyARaSk1crZu1zNFg"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 1,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "w_98pzBEQv2s31OVL7GZHA"
+                            }
+                        }
+                    ],
+                    "8": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 8,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "MZDxrAsdSFOzsB-svPFLJw"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 8,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "GS0J306aTpWCI-6vDts6Kg"
+                            }
+                        }
+                    ],
+                    "18": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 18,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "83EHvUxeTWS1F00bWu4t1g"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 18,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "2cfJzTpXTjWrNKVEoznWgg"
+                            }
+                        }
+                    ],
+                    "23": [
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "pftqFSvzS-GP0GJ5EyJhsg",
+                            "relocating_node": null,
+                            "shard": 23,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "FGpG8fZvQPeoSqk3I_4wJQ"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 23,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "gc0ejkXyQSeNDj6QggKG2g"
+                            }
+                        }
+                    ],
+                    "0": [
+                        {
+                            "state": "STARTED",
+                            "primary": false,
+                            "node": "cYd5Ti5FQJiT_w6v4di0RA",
+                            "relocating_node": null,
+                            "shard": 0,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "KEII55fRSSieV6HqkiaezQ"
+                            }
+                        },
+                        {
+                            "state": "STARTED",
+                            "primary": true,
+                            "node": "w9jLu1qEQJuLrDMXa5BfiQ",
+                            "relocating_node": null,
+                            "shard": 0,
+                            "index": "dodox_jobmanager_base",
+                            "allocation_id": {
+                                "id": "Kw23K2QtThyShu0C83469w"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

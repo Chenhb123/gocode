@@ -1,0 +1,2874 @@
+{
+    "took": 2,
+    "timed_out": false,
+    "_shards": {
+        "total": 25,
+        "successful": 25,
+        "failed": 0
+    },
+    "hits": {
+        "total": 15,
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "c375NC4220W",
+                "_score": 1.0,
+                "_source": {
+                    "id": "c375NC4220W",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "完整流程",
+                            "dagSubmit": true,
+                            "dagid": "fcd1b7b4b237f8e9d1c302504fe82e33"
+                        }
+                    ],
+                    "dirid": "AW-tClZSC19-X4X6bx9p",
+                    "notetype": "sql",
+                    "notename": "表输出",
+                    "datecreated": "2020-01-16 14:29:16",
+                    "updatetime": "2020-01-16 18:05:51",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "hive",
+                    "udfcmd": "",
+                    "content": "drop table if exists \"c375NC4220W\"  ;  create table \"c375NC4220W\" as select car,driver_id,gender,car_id,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from (select * from \"accident_shigu\" ) a  ; create table if not exists dwddb.\"dwd_accident_sc\"( car varchar comment'', driver_id varchar comment'', car_id varchar comment'', createtime varchar comment'', birth varchar comment'', jxmc varchar comment'', gender_mc varchar comment'', car_id_1 varchar comment'', clpp1 varchar comment''); insert into dwddb.\"dwd_accident_sc\" select  car, driver_id, car_id, createtime, birth, jxmc, gender_mc, car_id_1, clpp1 from \"c375NC4220W\";drop table if exists cGE4H98949A ;drop table if exists c375NC4220W ;",
+                    "tags": [],
+                    "initdb": "basedb",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /etc/danastudio/presto_hive.py basedb /var/dana/dodox/filemanager/file/danastudio-unsubmit/c375NC4220W ",
+                    "ktrs": null,
+                    "kjbs": null,
+                    "taskid": "fcd1b7b4b237f8e9d1c302504fe82e33",
+                    "module": 5,
+                    "subid": 4,
+                    "tbinfo": {
+                        "engineid": "",
+                        "dbname": "",
+                        "schema": "",
+                        "tbname": "",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "newtbinfo": {
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "dbname": "basedb",
+                        "schema": "",
+                        "tbname": "xxn_c375NC4220W",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "status": true,
+                    "outputcomment": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "outputshowsql": "select  car, driver_id, car_id, createtime, birth, jxmc, gender_mc, car_id_1, clpp1 from \"xxn_c375NC4220W\"",
+                    "iscustom": true,
+                    "customtable": "",
+                    "joinstring": "",
+                    "star": false,
+                    "commentsmap": {
+                        "gender_mc": "",
+                        "createtime": "",
+                        "driver_id": "",
+                        "gender_bz": "",
+                        "gender": "",
+                        "car": "",
+                        "jxmc": "",
+                        "birth": "",
+                        "car_id": "",
+                        "car_id_1": "",
+                        "clpp1": ""
+                    },
+                    "customrefertables": {
+                        "clicktables": null,
+                        "unclicktables": null,
+                        "clickroles": ""
+                    },
+                    "changedinfo": [
+                        {
+                            "fieldname": "car",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "driver_id",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "gender",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "car_id",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "createtime",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "birth",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "jxmc",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "gender_bz",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "gender_mc",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "car_id_1",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        },
+                        {
+                            "fieldname": "clpp1",
+                            "fielddescribe": "",
+                            "fieldtype": "varchar"
+                        }
+                    ],
+                    "cookinginput": [
+                        {
+                            "temptable": "accident_shigu",
+                            "modulename": "sql脚本",
+                            "connectid": 0,
+                            "fields": [
+                                "car",
+                                "driver_id",
+                                "gender",
+                                "car_id",
+                                "createtime",
+                                "birth",
+                                "jxmc",
+                                "gender_bz",
+                                "gender_mc",
+                                "car_id_1",
+                                "clpp1"
+                            ],
+                            "moduleid": "cGE4H98949A"
+                        }
+                    ],
+                    "fieldinfos": null,
+                    "standardfieldinfos": null,
+                    "outputfields": [
+                        "car",
+                        "driver_id",
+                        "car_id",
+                        "createtime",
+                        "birth",
+                        "jxmc",
+                        "gender_mc",
+                        "car_id_1",
+                        "clpp1"
+                    ],
+                    "cookingchoicefields": [
+                        "car",
+                        "driver_id",
+                        "gender",
+                        "car_id",
+                        "createtime",
+                        "birth",
+                        "jxmc",
+                        "gender_bz",
+                        "gender_mc",
+                        "car_id_1",
+                        "clpp1"
+                    ],
+                    "filter": [],
+                    "cookingtempcontent": "drop table if exists \"xxn_c375NC4220W\"  ;  create table \"xxn_c375NC4220W\" as select car,driver_id,gender,car_id,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from (select * from \"accident_shigu\" ) a  ; ",
+                    "cookingstruct": null,
+                    "finaltable": {
+                        "schema": "",
+                        "partitions": [],
+                        "tbname": "dwd_accident_sc",
+                        "flag": false,
+                        "dbname": "dwddb",
+                        "tagid": null,
+                        "subject": "未知",
+                        "days": -1,
+                        "partitionsnum": 0,
+                        "describe": "",
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "tags": []
+                    },
+                    "outputfieldtypes": [
+                        "varchar",
+                        "varchar",
+                        "varchar",
+                        "varchar",
+                        "varchar",
+                        "varchar",
+                        "varchar",
+                        "varchar",
+                        "varchar"
+                    ]
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "AW-t1B_5C19-X4X6byLi",
+                "_score": 1.0,
+                "_source": {
+                    "id": "AW-t1B_5C19-X4X6byLi",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "多脚本工作流",
+                            "dagSubmit": true,
+                            "dagid": "67fa0b73e5c8c19756e040eb75250640"
+                        }
+                    ],
+                    "dirid": "AW-t0YM2C19-X4X6byLM",
+                    "notetype": "python",
+                    "notename": "test1.py",
+                    "datecreated": "2020-01-16 18:09:17",
+                    "updatetime": "2020-01-16 18:09:37",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "",
+                    "udfcmd": "",
+                    "content": "#!/usr/bin/python\n# -*- coding: UTF-8 -*-\n\nfor i in range(1, 5):\n    for j in range(1, 5):\n        for k in range(1, 5):\n            if (i != k) and (i != j) and (j != k):\n                print  i, j, k",
+                    "variables": [],
+                    "delif": false,
+                    "timevars": [],
+                    "tags": [],
+                    "trash": false,
+                    "star": false,
+                    "toptime": "",
+                    "initdb": "",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /var/dana/dodox/filemanager/file/danastudio-unsubmit/AW-t1B_5C19-X4X6byLi",
+                    "ktrs": null,
+                    "kjbs": null
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "AW-t2ylFC19-X4X6byNW",
+                "_score": 1.0,
+                "_source": {
+                    "id": "AW-t2ylFC19-X4X6byNW",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "多脚本工作流",
+                            "dagSubmit": true,
+                            "dagid": "67fa0b73e5c8c19756e040eb75250640"
+                        }
+                    ],
+                    "dirid": "AW-t0YM2C19-X4X6byLM",
+                    "notetype": "shell",
+                    "notename": "test.sh",
+                    "datecreated": "2020-01-16 18:16:58",
+                    "updatetime": "2020-01-16 18:16:58",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "",
+                    "udfcmd": "",
+                    "content": "#/bin/sh\nshellFilePath=$(cd $(dirname \"$0\");pwd)\ncd $shellFilePath\n\necho $shellFilePath\n",
+                    "variables": [],
+                    "delif": false,
+                    "timevars": null,
+                    "tags": [],
+                    "trash": false,
+                    "star": false,
+                    "toptime": "",
+                    "initdb": "",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "/bin/bash /var/dana/dodox/filemanager/file/danastudio-unsubmit/AW-t2ylFC19-X4X6byNW",
+                    "ktrs": null,
+                    "kjbs": null
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "cGE4H98949A",
+                "_score": 1.0,
+                "_source": {
+                    "id": "cGE4H98949A",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "完整流程",
+                            "dagSubmit": true,
+                            "dagid": "fcd1b7b4b237f8e9d1c302504fe82e33"
+                        }
+                    ],
+                    "dirid": "AW-tClZSC19-X4X6bx9p",
+                    "notetype": "sql",
+                    "notename": "sql脚本",
+                    "datecreated": "2020-01-16 17:30:12",
+                    "updatetime": "2020-01-16 18:05:00",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "AW-oooDSC19-X4X6bx0s",
+                    "udfcmd": "",
+                    "content": "drop table if exists  accident_shigu;\ncreate  table accident_shigu as select * from cN7A4VH1IR3;",
+                    "tags": [],
+                    "initdb": "basedb",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /etc/danastudio/presto_hive.py basedb /var/dana/dodox/filemanager/file/danastudio-unsubmit/cGE4H98949A ",
+                    "ktrs": null,
+                    "kjbs": null,
+                    "taskid": "fcd1b7b4b237f8e9d1c302504fe82e33",
+                    "module": 99,
+                    "subid": 8,
+                    "tbinfo": {
+                        "engineid": "",
+                        "dbname": "",
+                        "schema": "",
+                        "tbname": "",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "newtbinfo": {
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "dbname": "basedb",
+                        "schema": "",
+                        "tbname": "accident_shigu",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "status": true,
+                    "outputcomment": [],
+                    "outputshowsql": "",
+                    "iscustom": true,
+                    "customtable": "accident_shigu",
+                    "joinstring": "",
+                    "star": false,
+                    "commentsmap": null,
+                    "customrefertables": {
+                        "clicktables": [],
+                        "unclicktables": [],
+                        "clickroles": ""
+                    },
+                    "changedinfo": null,
+                    "cookinginput": null,
+                    "fieldinfos": null,
+                    "standardfieldinfos": null,
+                    "outputfields": [],
+                    "timevars": []
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "cN7A4VH1IR3",
+                "_score": 1.0,
+                "_source": {
+                    "id": "cN7A4VH1IR3",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "完整流程",
+                            "dagSubmit": true,
+                            "dagid": "fcd1b7b4b237f8e9d1c302504fe82e33"
+                        }
+                    ],
+                    "dirid": "AW-tClZSC19-X4X6bx9p",
+                    "notetype": "sql",
+                    "notename": "数据加工",
+                    "datecreated": "2020-01-16 17:29:55",
+                    "updatetime": "2020-01-16 17:58:55",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "AW-oooDSC19-X4X6bx0s",
+                    "udfcmd": "",
+                    "content": "drop table if exists \"cN7A4VH1IR3\"  ;  create table \"cN7A4VH1IR3\" as select driver_id,gender,car_id,carmodels,carcolor,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from (select \"c058K2Z75B2\".driver_id , \"c058K2Z75B2\".gender , \"c058K2Z75B2\".car_id , \"c058K2Z75B2\".carmodels , \"c058K2Z75B2\".carcolor , \"c058K2Z75B2\".createtime , \"c058K2Z75B2\".birth , \"c058K2Z75B2\".jxmc , \"c058K2Z75B2\".f9 , \"c058K2Z75B2\".f10 , \"c058K2Z75B2\".f11 , \"c058K2Z75B2\".f12 , \"c058K2Z75B2\".dwd_zjid , \"c058K2Z75B2\".dwd_rksj , \"c058K2Z75B2\".dwd_gxsj , \"c058K2Z75B2\".dwd_sfky , \"c058K2Z75B2\".dwd_sfwt , \"c058K2Z75B2\".gender_bz , \"c058K2Z75B2\".gender_mc , \"c0I13TX7WK8\".car_id as car_id_1 , \"c0I13TX7WK8\".clpp1 , \"c0I13TX7WK8\".dwd_zjid as dwd_zjid_1 from \"c058K2Z75B2\"  inner join \"c0I13TX7WK8\" on  cast(\"c058K2Z75B2\".car_id as varchar) =  cast(\"c0I13TX7WK8\".car_id as varchar) ) a  ;  drop table if exists \"cN7A4VH1IR3_temp\" ;alter table \"cN7A4VH1IR3\" rename to \"cN7A4VH1IR3_temp\" ;create table \"cN7A4VH1IR3\" as (with t4 as (with t3 as (with t2 as (with t1 as (with t0 as (select * from \"cN7A4VH1IR3_temp\") select CONCAT(carcolor,carmodels) as car,driver_id,gender,car_id,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from \"t0\") select car,driver_id,gender,car_id,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from \"t1\") select car,driver_id,gender,car_id,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from \"t2\") select car,driver_id,gender,car_id,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from \"t3\") select car,driver_id,gender,car_id,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from \"t4\")  ;  drop table if exists \"base_jg_1\" ; create table \"base_jg_1\" as select * from  \"cN7A4VH1IR3\" ; drop table if exists \"c058K2Z75B2\" ;drop table if exists \"c0I13TX7WK8\" ;",
+                    "tags": [],
+                    "initdb": "basedb",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /etc/danastudio/presto_hive.py basedb /var/dana/dodox/filemanager/file/danastudio-unsubmit/cN7A4VH1IR3  ",
+                    "ktrs": null,
+                    "kjbs": null,
+                    "taskid": "fcd1b7b4b237f8e9d1c302504fe82e33",
+                    "module": 4,
+                    "subid": 7,
+                    "tbinfo": {
+                        "engineid": "",
+                        "dbname": "",
+                        "schema": "",
+                        "tbname": "",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "newtbinfo": {
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "dbname": "basedb",
+                        "schema": "",
+                        "tbname": "xxn_cN7A4VH1IR3",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "status": true,
+                    "outputcomment": [],
+                    "outputshowsql": "",
+                    "iscustom": true,
+                    "customtable": "",
+                    "joinstring": "",
+                    "star": false,
+                    "commentsmap": {
+                        "gender_mc": "",
+                        "createtime": "",
+                        "driver_id": "",
+                        "gender_bz": "",
+                        "carmodels": "",
+                        "f10": "",
+                        "gender": "",
+                        "f12": "",
+                        "f11": "",
+                        "birth": "",
+                        "dwd_zjid": "随机主键",
+                        "clpp1": "",
+                        "dwd_sfwt": "是否问题",
+                        "carcolor": "",
+                        "dwd_rksj": "dwd入库时间",
+                        "f9": "",
+                        "jxmc": "",
+                        "car_id": "",
+                        "dwd_gxsj": "dwd更新时间",
+                        "dwd_sfky": "问题强弱"
+                    },
+                    "customrefertables": {
+                        "clicktables": null,
+                        "unclicktables": null,
+                        "clickroles": ""
+                    },
+                    "changedinfo": null,
+                    "cookinginput": [
+                        {
+                            "temptable": "xxn_c058K2Z75B2",
+                            "modulename": "标准化",
+                            "connectid": 0,
+                            "fields": [
+                                "driver_id",
+                                "gender",
+                                "car_id",
+                                "carmodels",
+                                "carcolor",
+                                "createtime",
+                                "birth",
+                                "jxmc",
+                                "f9",
+                                "f10",
+                                "f11",
+                                "f12",
+                                "dwd_zjid",
+                                "dwd_rksj",
+                                "dwd_gxsj",
+                                "dwd_sfky",
+                                "dwd_sfwt",
+                                "gender_bz",
+                                "gender_mc"
+                            ],
+                            "moduleid": "c058K2Z75B2"
+                        },
+                        {
+                            "connectfields": [
+                                "car_id"
+                            ],
+                            "mainfields": [
+                                "car_id"
+                            ],
+                            "connecttype": "inner",
+                            "temptable": "xxn_c0I13TX7WK8",
+                            "modulename": "标准化2base_car_md",
+                            "connectid": 1,
+                            "fields": [
+                                "car_id",
+                                "clpp1",
+                                "dwd_zjid"
+                            ],
+                            "moduleid": "c0I13TX7WK8"
+                        }
+                    ],
+                    "fieldinfos": null,
+                    "standardfieldinfos": null,
+                    "outputfields": [],
+                    "cookingchoicefields": [
+                        "driver_id",
+                        "gender",
+                        "car_id",
+                        "carmodels",
+                        "carcolor",
+                        "createtime",
+                        "birth",
+                        "jxmc",
+                        "gender_bz",
+                        "gender_mc",
+                        "car_id_1",
+                        "clpp1"
+                    ],
+                    "filter": null,
+                    "cookingtempcontent": "drop table if exists \"xxn_cN7A4VH1IR3\"  ;  create table \"xxn_cN7A4VH1IR3\" as select driver_id,gender,car_id,carmodels,carcolor,createtime,birth,jxmc,gender_bz,gender_mc,car_id_1,clpp1 from (select \"xxn_c058K2Z75B2\".driver_id , \"xxn_c058K2Z75B2\".gender , \"xxn_c058K2Z75B2\".car_id , \"xxn_c058K2Z75B2\".carmodels , \"xxn_c058K2Z75B2\".carcolor , \"xxn_c058K2Z75B2\".createtime , \"xxn_c058K2Z75B2\".birth , \"xxn_c058K2Z75B2\".jxmc , \"xxn_c058K2Z75B2\".f9 , \"xxn_c058K2Z75B2\".f10 , \"xxn_c058K2Z75B2\".f11 , \"xxn_c058K2Z75B2\".f12 , \"xxn_c058K2Z75B2\".dwd_zjid , \"xxn_c058K2Z75B2\".dwd_rksj , \"xxn_c058K2Z75B2\".dwd_gxsj , \"xxn_c058K2Z75B2\".dwd_sfky , \"xxn_c058K2Z75B2\".dwd_sfwt , \"xxn_c058K2Z75B2\".gender_bz , \"xxn_c058K2Z75B2\".gender_mc , \"xxn_c0I13TX7WK8\".car_id as car_id_1 , \"xxn_c0I13TX7WK8\".clpp1 , \"xxn_c0I13TX7WK8\".dwd_zjid as dwd_zjid_1 from \"xxn_c058K2Z75B2\"  inner join \"xxn_c0I13TX7WK8\" on  cast(\"xxn_c058K2Z75B2\".car_id as varchar) =  cast(\"xxn_c0I13TX7WK8\".car_id as varchar) ) a  ; ",
+                    "cookingstruct": [
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "carcolor",
+                                        "carmodels"
+                                    ],
+                                    "item": {
+                                        "funcfieldconcat": {
+                                            "originfields": null,
+                                            "newfieldname": "car",
+                                            "newfieldtype": "string"
+                                        }
+                                    },
+                                    "inputtype": [
+                                        "string",
+                                        "string"
+                                    ],
+                                    "rule": "concat",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        }
+                    ],
+                    "middletable": {
+                        "tagid": null,
+                        "days": -1,
+                        "describe": "",
+                        "tablename": "base_jg_1",
+                        "tags": []
+                    },
+                    "cookingfieldinfos": [
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "carcolor",
+                                        "carmodels"
+                                    ],
+                                    "item": {
+                                        "funcfieldconcat": {
+                                            "originfields": null,
+                                            "newfieldname": "car",
+                                            "newfieldtype": "string"
+                                        }
+                                    },
+                                    "inputtype": [
+                                        "string",
+                                        "string"
+                                    ],
+                                    "rule": "concat",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        },
+                        {
+                            "nodes": [
+                                {
+                                    "output": [
+                                        "car"
+                                    ],
+                                    "input": [
+                                        "car"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "driver_id"
+                                    ],
+                                    "input": [
+                                        "driver_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender"
+                                    ],
+                                    "input": [
+                                        "gender"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id"
+                                    ],
+                                    "input": [
+                                        "car_id"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "createtime"
+                                    ],
+                                    "input": [
+                                        "createtime"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "birth"
+                                    ],
+                                    "input": [
+                                        "birth"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "jxmc"
+                                    ],
+                                    "input": [
+                                        "jxmc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_bz"
+                                    ],
+                                    "input": [
+                                        "gender_bz"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "gender_mc"
+                                    ],
+                                    "input": [
+                                        "gender_mc"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "car_id_1"
+                                    ],
+                                    "input": [
+                                        "car_id_1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                },
+                                {
+                                    "output": [
+                                        "clpp1"
+                                    ],
+                                    "input": [
+                                        "clpp1"
+                                    ],
+                                    "item": {},
+                                    "inputtype": [
+                                        "string"
+                                    ],
+                                    "rule": "none",
+                                    "outputtype": [
+                                        "string"
+                                    ],
+                                    "isstop": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "c2997S8BJ6K",
+                "_score": 1.0,
+                "_source": {
+                    "id": "c2997S8BJ6K",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "完整流程",
+                            "dagSubmit": true,
+                            "dagid": "fcd1b7b4b237f8e9d1c302504fe82e33"
+                        }
+                    ],
+                    "dirid": "AW-tClZSC19-X4X6bx9p",
+                    "notetype": "sql",
+                    "notename": "表输入2",
+                    "datecreated": "2020-01-16 14:29:23",
+                    "updatetime": "2020-01-16 14:29:23",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "AW-oooDSC19-X4X6bx0s",
+                    "udfcmd": "",
+                    "content": " DROP TABLE IF EXISTS \"c2997S8BJ6K\" ;  CREATE TABLE \"c2997S8BJ6K\"  (  hphm varchar comment'', clpp1 varchar comment'' ,dwd_zjid  varchar comment '随机主键' );insert into \"c2997S8BJ6K\"  select *, to_hex(md5(COALESCE ( cast( cast(hphm as varchar)  as varbinary) , cast('' as varbinary) )))  as dwd_zjid  from \"bai\".\"ods_2015carinfo\"   ;",
+                    "tags": [],
+                    "initdb": "basedb",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /etc/danastudio/presto_hive.py basedb /var/dana/dodox/filemanager/file/danastudio-unsubmit/c2997S8BJ6K ",
+                    "ktrs": null,
+                    "kjbs": null,
+                    "taskid": "fcd1b7b4b237f8e9d1c302504fe82e33",
+                    "module": 1,
+                    "subid": 5,
+                    "tbinfo": {
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "dbname": "bai",
+                        "schema": "",
+                        "tbname": "ods_2015carinfo",
+                        "tbtype": "",
+                        "aitbid": "",
+                        "layerid": "AW-ooyBZC19-X4X6bx01"
+                    },
+                    "newtbinfo": {
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "dbname": "basedb",
+                        "schema": "",
+                        "tbname": "xxn_c2997S8BJ6K",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "status": true,
+                    "outputcomment": null,
+                    "outputshowsql": "",
+                    "iscustom": true,
+                    "customtable": "",
+                    "joinstring": "",
+                    "star": false,
+                    "commentsmap": null,
+                    "customrefertables": {
+                        "clicktables": null,
+                        "unclicktables": null,
+                        "clickroles": ""
+                    },
+                    "changedinfo": null,
+                    "fieldinfo": {
+                        "timefield": "",
+                        "flag": false,
+                        "sorttype": 1,
+                        "timeterm": [],
+                        "duproles": {
+                            "extraclean": null,
+                            "problem": false,
+                            "dataclean": false
+                        },
+                        "mainkeyfield": [
+                            "hphm"
+                        ],
+                        "sortfield": "",
+                        "wherecontent": ""
+                    }
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "AW-t1CABC19-X4X6byLk",
+                "_score": 1.0,
+                "_source": {
+                    "id": "AW-t1CABC19-X4X6byLk",
+                    "jobid": "",
+                    "dags": [],
+                    "dirid": "AW-t0YM2C19-X4X6byLM",
+                    "notetype": "python",
+                    "notename": "test2.py",
+                    "datecreated": "2020-01-16 18:09:17",
+                    "updatetime": "2020-01-16 18:09:43",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "",
+                    "udfcmd": "",
+                    "content": "#!/usr/bin/python\n# -*- coding: UTF-8 -*-\n\ni = int(raw_input('净利润:'))\narr = [1000000, 600000, 400000, 200000, 100000, 0]\nrat = [0.01, 0.015, 0.03, 0.05, 0.075, 0.1]\nr = 0\nfor idx in range(0, 6):\n    if i > arr[idx]:\n        r += (i - arr[idx]) * rat[idx]\n        print(i - arr[idx]) * rat[idx]\n        i = arr[idx]\nprint r",
+                    "variables": [],
+                    "delif": false,
+                    "timevars": [],
+                    "tags": [],
+                    "trash": false,
+                    "star": false,
+                    "toptime": "",
+                    "initdb": "",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /var/dana/dodox/filemanager/file/danastudio-unsubmit/AW-t1CABC19-X4X6byLk",
+                    "ktrs": null,
+                    "kjbs": null
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "AW-t23_jC19-X4X6byNZ",
+                "_score": 1.0,
+                "_source": {
+                    "id": "AW-t23_jC19-X4X6byNZ",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "多脚本工作流",
+                            "dagSubmit": true,
+                            "dagid": "67fa0b73e5c8c19756e040eb75250640"
+                        }
+                    ],
+                    "dirid": "AW-t0YM2C19-X4X6byLM",
+                    "notetype": "sql",
+                    "notename": "sql",
+                    "datecreated": "2020-01-16 18:17:21",
+                    "updatetime": "2020-01-16 18:18:31",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "AW-oooDSC19-X4X6bx0s",
+                    "udfcmd": "",
+                    "content": "--=================================================================\n--  Auhtor                 :\n--  Create Date            :\n--  Modified Date          :\n--  Modified Content       :\n--  Description            :\n--=================================================================\n\nselect * from ods_time",
+                    "variables": null,
+                    "delif": false,
+                    "timevars": [],
+                    "tags": [],
+                    "trash": false,
+                    "star": false,
+                    "toptime": "",
+                    "initdb": "bai",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /etc/danastudio/presto_hive.py bai /var/dana/dodox/filemanager/file/danastudio-unsubmit/AW-t23_jC19-X4X6byNZ ",
+                    "ktrs": null,
+                    "kjbs": null
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "AW-t1CABC19-X4X6byLj",
+                "_score": 1.0,
+                "_source": {
+                    "id": "AW-t1CABC19-X4X6byLj",
+                    "jobid": "",
+                    "dags": [],
+                    "dirid": "AW-t0YM2C19-X4X6byLM",
+                    "notetype": "python",
+                    "notename": "test3.py",
+                    "datecreated": "2020-01-16 18:09:17",
+                    "updatetime": "2020-01-16 18:09:17",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "",
+                    "udfcmd": "",
+                    "content": "#!/usr/bin/python\n# -*- coding: UTF-8 -*-\n\nfor i in range(1, 85):\n    if 168 % i == 0:\n        j = 168 / i;\n        if i > j and (i + j) % 2 == 0 and (i - j) % 2 == 0:\n            m = (i + j) / 2\n            n = (i - j) / 2\n            x = n * n - 100\n            print(x)",
+                    "variables": [],
+                    "delif": false,
+                    "timevars": null,
+                    "tags": [],
+                    "trash": false,
+                    "star": false,
+                    "toptime": "",
+                    "initdb": "",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /var/dana/dodox/filemanager/file/danastudio-unsubmit/AW-t1CABC19-X4X6byLj",
+                    "ktrs": null,
+                    "kjbs": null
+                }
+            },
+            {
+                "_index": "danastudio_ants_lab",
+                "_type": "tb_dev",
+                "_id": "c3Y53CBZX78",
+                "_score": 1.0,
+                "_source": {
+                    "id": "c3Y53CBZX78",
+                    "jobid": "",
+                    "dags": [
+                        {
+                            "dagname": "完整流程",
+                            "dagSubmit": true,
+                            "dagid": "fcd1b7b4b237f8e9d1c302504fe82e33"
+                        }
+                    ],
+                    "dirid": "AW-tClZSC19-X4X6bx9p",
+                    "notetype": "sql",
+                    "notename": "表输入",
+                    "datecreated": "2020-01-16 14:28:53",
+                    "updatetime": "2020-01-16 14:28:53",
+                    "submitted": false,
+                    "submitinfo": {
+                        "submitpath": "",
+                        "submitcmd": "",
+                        "name": "",
+                        "description": "",
+                        "scheduletype": 0,
+                        "scheduledetail": "",
+                        "assignnode": ""
+                    },
+                    "user": "AW-oop7fC19-X4X6bx0u",
+                    "username": "test",
+                    "sqlid": "AW-oooDSC19-X4X6bx0s",
+                    "udfcmd": "",
+                    "content": " DROP TABLE IF EXISTS \"c3Y53CBZX78\" ;  CREATE TABLE \"c3Y53CBZX78\"  (  drviverinfoid varchar comment'', sex varchar comment'', pl5tenumber varchar comment'', carmodels varchar comment'', carcolor varchar comment'', createtime varchar comment'', birth varchar comment'', jxmc varchar comment'', f9 varchar comment'', f10 varchar comment'', f11 varchar comment'', f12 varchar comment'' ,dwd_zjid  varchar comment '随机主键' );insert into \"c3Y53CBZX78\"  select *, to_hex(md5(COALESCE ( cast( cast(pl5tenumber as varchar)  as varbinary) , cast('' as varbinary) )))  as dwd_zjid  from \"odsdb\".\"ods_2015personinfo\"   ;",
+                    "tags": [],
+                    "initdb": "basedb",
+                    "pid": 0,
+                    "deletetime": "",
+                    "description": "",
+                    "concat": null,
+                    "finalcmd": "python /etc/danastudio/presto_hive.py basedb /var/dana/dodox/filemanager/file/danastudio-unsubmit/c3Y53CBZX78 ",
+                    "ktrs": null,
+                    "kjbs": null,
+                    "taskid": "fcd1b7b4b237f8e9d1c302504fe82e33",
+                    "module": 1,
+                    "subid": 1,
+                    "tbinfo": {
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "dbname": "odsdb",
+                        "schema": "",
+                        "tbname": "ods_2015personinfo",
+                        "tbtype": "",
+                        "aitbid": "",
+                        "layerid": "AW-ooyBZC19-X4X6bx01"
+                    },
+                    "newtbinfo": {
+                        "engineid": "AW-oooDSC19-X4X6bx0s",
+                        "dbname": "basedb",
+                        "schema": "",
+                        "tbname": "xxn_c3Y53CBZX78",
+                        "tbtype": "",
+                        "aitbid": ""
+                    },
+                    "status": true,
+                    "outputcomment": null,
+                    "outputshowsql": "",
+                    "iscustom": true,
+                    "customtable": "",
+                    "joinstring": "",
+                    "star": false,
+                    "commentsmap": null,
+                    "customrefertables": {
+                        "clicktables": null,
+                        "unclicktables": null,
+                        "clickroles": ""
+                    },
+                    "changedinfo": null,
+                    "fieldinfo": {
+                        "timefield": "",
+                        "flag": false,
+                        "sorttype": 1,
+                        "timeterm": [],
+                        "duproles": {
+                            "extraclean": null,
+                            "problem": false,
+                            "dataclean": false
+                        },
+                        "mainkeyfield": [
+                            "pl5tenumber"
+                        ],
+                        "sortfield": "",
+                        "wherecontent": ""
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,86 @@
+{
+  "job": {
+    "content": [
+      {
+        "writer": {
+          "parameter": {
+            "writeMode": "append", 
+            "column": [
+              {
+                "type": "bigint", 
+                "name": "id"
+              },
+              {
+                "type": "string", 
+                "name": "name"
+              }, 
+              {
+                "type": "string", 
+                "name": "col1"
+              }, 
+              {
+                "type": "string", 
+                "name": "col2"
+              }, 
+              {
+                "type": "string", 
+                "name": "col3"
+              }, 
+              {
+                "type": "string", 
+                "name": "col4"
+              }
+            ], 
+            "fieldDelimiter": "\t", 
+            "fileType": "text", 
+            "hadoopConfig": {
+              "dfs.client.failover.proxy.provider.hacluster": "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider", 
+              "dfs.namenode.rpc-address.hacluster.namenode2": "192.168.70.12:8020", 
+              "dfs.ha.namenodes.hacluster": "namenode1,namenode2", 
+              "dfs.namenode.rpc-address.hacluster.namenode1": "192.168.70.11:8020", 
+              "dfs.nameservices": "hacluster"
+            },
+            "fileName": "pgslice",
+            "path": "/apps/hive/warehouse/chbbase.db/pgslice", 
+            "defaultFS": "hdfs://hacluster"
+          }, 
+          "name": "hdfswriter"
+        }, 
+        "reader": {
+          "name": "postgresqlreader",
+          "parameter": {
+            "column": [
+              "id",
+              "name",
+              "col1",
+              "col2",
+              "col3",
+              "col4"
+            ],
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:postgresql://192.168.90.39:19001/teryx"
+                ],
+                "table": [
+                  "test"
+                ]
+              }
+            ],
+            "password": "teryx",
+            "username": "teryx"
+          }
+        }
+      }
+    ], 
+    "setting": {
+      "speed": {
+        "channel": 32
+      }, 
+      "errorLimit": {
+        "record": 1000, 
+        "percentage": 0.02
+      }
+    }
+  }
+}

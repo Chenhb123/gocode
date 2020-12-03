@@ -1,0 +1,46 @@
+{
+    "job": {
+            "setting": {
+        "speed": {
+             "channel": 32
+        },
+        "errorLimit": {
+            "record": 1000,
+            "percentage": 0.02
+        }
+    },
+        "content": [
+            {
+	                "reader": 
+					 {
+                    "name": "postgresqlreader",
+                    "parameter": {
+                        "username": "stork",
+                        "password": "stork",
+                        "column": ["\"col\"","\"col1\"","\"col2\"","\"col3\""],
+                        "splitPk": "",
+                        "where":"",
+                        "connection": [
+                            {
+                                "table": ["temp.\"test\""],
+                                "jdbcUrl": ["jdbc:postgresql://192.168.2.23:14103/test"]
+                            }
+                        ]
+                    }
+                }, 
+                "writer": {
+                        "name": "txtfilewriter",
+                        "parameter": {
+                            "path": "/opt/danastudio/ants/tdcload",
+                            "writeMode": "truncate",
+                            "fileName": "test0302.csv",
+                            "fieldDelimiter": "\u0001",
+                            "encoding": "utf8",
+                            "dateFormat": "yyyy-MM-dd HH:mm:ss"
+                        }
+                }
+                 
+            }
+        ]
+    }
+}

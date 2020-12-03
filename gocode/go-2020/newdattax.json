@@ -1,0 +1,57 @@
+{
+    "job": {
+            "setting": {
+        "speed": {
+             "channel": 32
+        },
+        "errorLimit": {
+            "record": 1000,
+            "percentage": 0.02
+        }
+    },
+        "content": [
+            {
+                "reader": 
+                {
+                "name": "rdbmsreader",
+                "parameter": {"increCol":"insert","increColFormat":"",
+                    "username": "hive",
+                    "password": "123456",
+                    "column": ["`select`","`insert`"],
+                    "splitPk": "",
+                    "where":"  date_format(regexp_replace(cast(`insert` as string), '/', '-') , 'yyyyMMddHHmmss') >from_unixtime(unix_timestamp('${starttime}','yyyyMMddHHmmss')) and date_format(regexp_replace(cast(`insert` as string), '/', '-') , 'yyyyMMddHHmmss')<=from_unixtime(unix_timestamp('${endtime}','yyyyMMddHHmmss'))  ",
+                    "connection": [
+                        {
+                            "table": ["`timetest`"],
+                            "jdbcUrl": ["jdbc:hive2://192.168.90.144:10000/default;auth=noSasl"]
+                        }
+                    ]
+                }
+            }, 
+                "writer": 
+                
+{
+                "name": "postgresqlwriter",
+                "parameter": {
+                    "username": "stork",
+                    "password": "stork",
+                    "column": ["\\\"select\\\"","\\\"insert\\\""],
+                    "preSql": [
+                        "--delete from @table"
+                    ],
+                    "postSql": [
+                        "ANALYZE \"public\".\"mmtime\""
+                    ],
+                    "connection": [
+                        {
+                            "jdbcUrl": "jdbc:postgresql://192.168.2.45:14103/appletree_storkdb?public",
+                            "table": ["\\\"mmtime\\\""]
+                        }
+                    ]
+                }
+            }
+
+            }
+        ]
+    }
+    }

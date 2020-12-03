@@ -1,0 +1,20 @@
+CREATE  TABLE ods_oracle11d33(str1 string DEFAULT NULL,str2 string DEFAULT NULL,str3 string DEFAULT NULL,                                         
+  str4 string DEFAULT NULL,
+   str5 string DEFAULT NULL,
+   str6 string DEFAULT NULL,
+   str7 string DEFAULT NULL,
+  str8 string DEFAULT NULL,
+   str9 string DEFAULT NULL,
+   str10 string DEFAULT NULL,
+   str11 string DEFAULT NULL) ROW FORMAT SERDE 'org.apache.hadoop.hive.ql.io.orc.OrcSerde'                              
+ WITH SERDEPROPERTIES (
+  'field.delim'='\t',    
+   'serialization.format'='\t')
+ STORED AS INPUTFORMAT
+   'org.apache.hadoop.hive.ql.io.orc.OrcInputFormat'
+ OUTPUTFORMAT
+   'org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat'
+
+
+ "http://192.168.90.91:31573/webhdfs/v1/tmp/detuo/ods_stu0102_chb0312555?op=CREATE&permission=777&guardian_access_token=cKjIZGNM8jGgqQrtss4f-WHVTFZ0.TDH"
+ "http://192.168.90.91:31573/webhdfs/v1/tmp/detuo/ods_oracle11d33_158406?op=CREATE&permission=777&guardian_access_token=cKjIZGNM8jGgqQrtss4f-WHVTFZ0.TDH"

@@ -1,0 +1,12 @@
+linux下python连接impala:
+环境下默认安装pip，执行一下命令：
+1.pip install six
+2.pip install bit_array
+3.pip install thriftpy
+## thrift (on Python 2.x) or thriftpy (on Python 3.x)
+4.yum install gcc-c++ python-devel.x86_64 cyrus-sasl-devel.x86_64
+5.yum install cyrus-sasl-plain  cyrus-sasl-devel  cyrus-sasl-gssapi
+6.pip install sasl
+7.pip install thrift_sasl
+8.pip install bitarray-0.8.1-cp34-none-win_amd64.whl
+9.pip install impyla

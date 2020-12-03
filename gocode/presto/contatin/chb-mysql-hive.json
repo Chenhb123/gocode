@@ -1,0 +1,50 @@
+{
+	    "job": {
+	            "setting": {
+            "speed": {
+                 "channel": 32
+            },
+            "errorLimit": {
+                "record": 0,
+                "percentage": 0.02
+            }
+        },
+	        "content": [
+	            {
+	                "reader": 
+					 {
+                    "name": "mysqlreader",
+                    "parameter": {
+                        "username": "root",
+                        "password": "root",
+                        "column": ["Host","User","Password"],
+                        "splitPk": "",
+                        "where":"",
+                        "connection": [
+                            {
+                                "table": ["`user`"],
+                                "jdbcUrl": ["jdbc:mysql://192.168.2.11:3306/mysql"]
+                            }
+                        ]
+                    }
+                }, 
+	                "writer": 
+					 
+ {
+    "name": "hdfswriter",
+    "parameter": {
+        "defaultFS": "hdfs://192.168.2.100:8020",
+        "fileType": "text",
+        "path": "/apps/hive/warehouse/odsdb.db",
+        "fileName": "testmysql",
+        "column":[{"name":"Host","type":"string"},{"name":"User","type":"string"},{"name":"Password","type":"string"}],
+        "writeMode": "append",
+        "fieldDelimiter": "\t"
+    }
+}
+ 
+	            }
+	        ]
+	    }
+	}
+

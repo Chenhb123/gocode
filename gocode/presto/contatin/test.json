@@ -1,0 +1,57 @@
+{
+    "job": {
+        "setting": {
+            "speed": {
+                "channel": 32
+            },
+            "errorLimit": {
+                "record": 0,
+                "percentage": 0.02
+            }
+        },
+        "content": [
+            {
+                "reader": {
+                    "name": "hdfsreader",
+                    "parameter": {
+                        "defaultFS": "hdfs://192.168.2.68:8020",
+                        "path": "/inceptor1/user/hive/warehouse/odsdb.db/hive/test/*",
+                        "column": [
+                            {
+                                "index": "0",
+                                "type": "int"
+                            },
+                            {
+                                "index": "1",
+                                "type": "string"
+                            }
+                        ],
+                        "fileType": "text",
+                        "encoding": "UTF-8",
+                        "fieldDelimiter": "\u0001"
+                    }
+                },
+            "writer": {
+                "name": "postgresqlwriter",
+                "parameter": {
+                    "username": "stork",
+                    "password": "stork",
+                    "column": [
+                        "id",
+                        "name"
+                    ],
+               "connection": [
+                        {
+                            "jdbcUrl": "jdbc:postgresql://192.168.2.80:14103/testdb", 
+                            "table": [
+                                "test"  
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+              
+        ]
+    }
+}

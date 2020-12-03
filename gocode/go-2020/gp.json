@@ -1,0 +1,57 @@
+{
+    "job": {
+            "setting": {
+        "speed": {
+             "channel": 32
+        },
+        "errorLimit": {
+            "record": 1000,
+            "percentage": 0.02
+        }
+    },
+        "content": [
+            {
+                "reader": 
+                 {
+                "name": "postgresqlreader",
+                "parameter": {
+                    "username": "stork",
+                    "password": "cqstork",
+                    "column": ["\"dict_value1\"","\"dict_key\""],
+                    "splitPk": "",
+                    "where":"",
+                    "connection": [
+                        {
+                            "table": ["public.\"cqxz_all_code\""],
+                            "jdbcUrl": ["jdbc:postgresql://77.1.24.128:14103/cqxz_meiya"]
+                        }
+                    ]
+                }
+            }, 
+            "writer": 
+             {
+                "name": "postgresqlwriter",
+                "parameter": {
+                    "username": "cq_dtsjzlsdfw_gp",
+                    "password": "dtsjzlsdfw_gp",
+                    "column": [
+                        "\"dict_value1\"",
+                        "\"dict_key\""
+                    ],
+                    "preSql": [
+                        ""
+                    ],
+                    "connection": [
+                        {
+                            "jdbcUrl": "jdbc:postgresql://77.1.33.1:5432/cq_dtsjzlsdfw_gp",
+                            "table": [
+                                "public.\"cqxz_all_code\""
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+}
