@@ -27,7 +27,7 @@ func main() {
 		fmt.Println("请求次数：", i+1, "，用时：", time.Now().Sub(start), "，Result：", Result,
 			"，熔断器开启状态：", cbs.IsOpen(), "，请求是否允许：", cbs.AllowRequest())
 	}
-	time.Sleep(20 * time.Second)
+	time.Sleep(10 * time.Second)
 }
 
 func run() error {
@@ -36,11 +36,7 @@ func run() error {
 		return nil
 	}
 	time.Sleep(2000 * time.Millisecond)
-	if Number%2 == 0 {
-		return nil
-	} else {
-		return fmt.Errorf("请求失败")
-	}
+	return nil
 }
 
 func getFallBack(err error) error {

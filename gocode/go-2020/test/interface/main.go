@@ -10,12 +10,12 @@ type worker interface {
 
 type person struct {
 	name string
-	//worker
+	worker
 }
 
-func (p person) work() {
-	fmt.Println(p.name)
-}
+//func (p person) work() {
+//	fmt.Println(p.name)
+//}
 
 func main() {
 	var w worker = person{}
