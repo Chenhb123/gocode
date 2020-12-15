@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -11,4 +12,7 @@ func main() {
 	}(c)
 	x := <-c
 	fmt.Println(x)
+	time.Sleep(10 * time.Second)
+	fmt.Println("------")
+	fmt.Println(<-c)
 }
