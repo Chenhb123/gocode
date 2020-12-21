@@ -176,3 +176,17 @@ func (t *BinaryTree) SliLevelOrder() [][]int {
 	}
 	return result
 }
+
+func MaxDepth(t *BinaryTree) int {
+	if t == nil {
+		return 0
+	} else {
+		left := MaxDepth(t.Left)
+		right := MaxDepth(t.Right)
+		if left > right {
+			return 1 + left
+		} else {
+			return 1 + right
+		}
+	}
+}
