@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"log"
 	"math"
+	"path"
 	"sort"
+	"sync"
 )
 
 // DiskStatus .
@@ -21,41 +23,41 @@ func main() {
 	log.Fatal("测试一下")
 	a, b := 1, 4
 	fmt.Println(math.Abs(float64(a - b)))
-	// res := make(chan int, 3)
-	// var wg sync.WaitGroup
+	res := make(chan int, 3)
+	var wg sync.WaitGroup
 
-	// for i := 0; i < 3; i++ {
-	// 	wg.Add(1)
-	// 	go func(n int) {
-	// 		defer wg.Done()
-	// 		res <- n
+	for i := 0; i < 3; i++ {
+		wg.Add(1)
+		go func(n int) {
+			defer wg.Done()
+			res <- n
 
-	// 	}(i)
-	// }
-	// wg.Wait()
-	// close(res)
+		}(i)
+	}
+	wg.Wait()
+	close(res)
 
-	// for v := range res {
-	// 	fmt.Println(v)
-	// }
-	// fmt.Println("main is end")
+	for v := range res {
+		fmt.Println(v)
+	}
+	fmt.Println("main is end")
 
-	// disk := DiskUsage("/")
-	// fmt.Println(disk)
-	// files := "/home/pkg/file.txt"
-	// f := path.Base(files)
-	// fmt.Println(f)
+	disk := DiskUsage("/")
+	fmt.Println(disk)
+	files := "/home/pkg/file.txt"
+	f := path.Base(files)
+	fmt.Println(f)
 }
 
-// disk usage of path/disk
-// func DiskUsage(path string) (disk DiskStatus) {
-// 	fs := syscall.Statfs_t{}
-// 	err := syscall.Statfs(path, &fs)
-// 	if err != nil {
-// 		return
-// 	}
-// 	disk.All = fs.Blocks * uint64(fs.Bsize)
-// 	disk.Free = fs.Bfree * uint64(fs.Bsize)
-// 	disk.Used = disk.All - disk.Free
-// 	return
-// }
+//disk usage of path/disk
+func DiskUsage(path string) (disk DiskStatus) {
+	fs := syscall.Statfs_t{}
+	err := syscall.Statfs(path, &fs)
+	if err != nil {
+		return
+	}
+	disk.All = fs.Blocks * uint64(fs.Bsize)
+	disk.Free = fs.Bfree * uint64(fs.Bsize)
+	disk.Used = disk.All - disk.Free
+	return
+}

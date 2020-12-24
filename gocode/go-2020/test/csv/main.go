@@ -14,6 +14,22 @@ func main() {
 		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
 		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
 		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
+		{"bigint": 1, "bit": true, "bool": 1, "boolean": 1, "varchar_1": "香港"},
 	}
 	var data [][]string
 	if len(mapStr) <= 0 {
