@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"path/filepath"
 )
 
 type worker interface {
@@ -20,5 +21,7 @@ type person struct {
 func main() {
 	var w worker = person{}
 	fmt.Println(w)
-	w.work()
+	//w.work()
+	var path = "/opt/dana/datax/errorData//"
+	fmt.Println(filepath.Clean(path))
 }
