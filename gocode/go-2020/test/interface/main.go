@@ -24,4 +24,11 @@ func main() {
 	//w.work()
 	var path = "/opt/dana/datax/errorData//"
 	fmt.Println(filepath.Clean(path))
+	var in interface{}
+	if len(path) > 10 {
+		in = len(path)
+	}
+	if in != nil {
+		fmt.Println(fmt.Sprintf("%v", in))
+	}
 }
